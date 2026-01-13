@@ -1,0 +1,100 @@
+.small-carousel {
+  height: 350px;  
+  margin-bottom: 10px;
+}
+
+.small-carousel .carousel-item,
+.small-carousel img {
+  height: 350px;
+}
+
+.small-carousel img {
+  object-fit: cover; 
+}
+
+.fixed-card-img {
+  width: 100%;        
+  height: 150px;      
+  object-fit: contain; 
+  display: block;
+  margin: 10px auto;  
+}
+
+.card {
+  height: 350px;     
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.card-img-top {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+    height: 50%;
+}
+
+.scroll-cards {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  overflow-y: hidden;
+}
+
+.scroll-cards .card {
+  display: inline-block; 
+  vertical-align: top;   
+}
+
+
+.scroll-cards::-webkit-scrollbar {
+  display: none; 
+}
+
+.scroll-cards {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+.btn.btn-primary {
+  position: relative;
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.btn-primary:hover {
+  background-color: #084298; 
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px rgba(13, 110, 253, 0.35);
+}
+
+.navbar, .nav-link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.navbar-brand .brand-text {
+  font-family: 'Share Tech', monospace;
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #0d6efd;
+}
+
+.navbar {
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+}
+
+.nav-link {
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd; 
+  transform: translateY(-2px); 
+}

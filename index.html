@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+  <body>
+  
+<nav class="navbar bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/logo.png" alt="Logo" width="100" height="60" class="me-2">
+      <span>RentBikeX</span>
+    </a>
+
+    <ul class="nav nav-pills">
+    
+     <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="html/getintouch.html">Get In Touch</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="html/aboutUs.html">About Us</a>
+     </li>
+    </ul>
+  </div>
+  
+</nav>
+
+<div id="carouselExampleInterval" class="carousel slide small-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/carousel/b1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item ">
+      <img src="img/carousel/b4.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item ">
+      <img src="img/carousel/b5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel/b2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel/b3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!-- Bikes Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Bikes</h2>
+    <div class="d-flex overflow-auto scroll-cards">
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/bikes/mb.avif" class="card-img-top fixed-card-img" alt="Mountain Bike">
+        <div class="card-body">
+          <h5 class="card-title">Royal Enfield Himalayan</h5>
+          <p class="card-text"> ₹ 1000/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/bikes/rb.png" class="card-img-top fixed-card-img" alt="Road Bike">
+        <div class="card-body">
+          <h5 class="card-title">Pulsar 220 F</h5>
+          <p class="card-text"> ₹ 700/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/bikes/hb.webp" class="card-img-top" alt="Hybrid Bike">
+        <div class="card-body">
+          <h5 class="card-title">Kawasaki Ninja 7</h5>
+          <p class="card-text"> ₹ 1900/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+        </div>
+        <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/bikes/bm.avif" class="card-img-top" alt="Hybrid Bike">
+        <div class="card-body">
+          <h5 class="card-title">Royal Enfield Meteor 350</h5>
+          <p class="card-text"> ₹ 1200/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+        </div>
+
+        <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/bikes/rc.avif" class="card-img-top" alt="Hybrid Bike">
+        <div class="card-body">
+          <h5 class="card-title">Royal Enfield Classic 350</h5>
+          <p class="card-text"> ₹ 900/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Scooters Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4">Scooters</h2>
+    <div class="d-flex overflow-auto scroll-cards">
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/Scooters/sa.webp" class="card-img-top" alt="City Scooter">
+        <div class="card-body">
+          <h5 class="card-title">Honda Activa 125</h5>
+          <p class="card-text"> ₹ 500/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/Scooters/sm.avif" class="card-img-top" alt="Electric Scooter">
+        <div class="card-body">
+          <h5 class="card-title">Hero Maestro Edge 110</h5>
+          <p class="card-text"> ₹ 400/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Electric Bikes Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Electric Bikes</h2>
+    <div class="d-flex overflow-auto scroll-cards">
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/Electric Bikes/PURE-EV-eTryst-350.webp" class="card-img-top" alt="E-Mountain Bike">
+        <div class="card-body">
+          <h5 class="card-title">PURE-EV-eTryst-350</h5>
+          <p class="card-text"> ₹ 800/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card me-3" style="min-width: 18rem;">
+        <img src="img/Electric Bikes/Revolt-RV-400.webp" class="card-img-top" alt="E-City Bike">
+        <div class="card-body">
+          <h5 class="card-title">Revolt-RV-400</h5>
+         <p class="card-text"> ₹ 1500/- (Per day) <br>
+          </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-dark text-white text-center py-1">
+  <div class="container">
+    <p class="mb-2">© 2026 RentBikeX</p>
+
+    <p class="mb-0">
+      <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+    </p>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+
+  
+</html>
