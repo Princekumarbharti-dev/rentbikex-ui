@@ -42,9 +42,13 @@ function openBooking(vehicle) {
   };
   pickup.addEventListener('change', () => { returnDate.min = pickup.value; updateTotal(); });
   returnDate.addEventListener('change', updateTotal);
-  modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-  modal.addEventListener('click', (event) => { if (event.target === modal) modal.remove(); });
-  modal.addEventListener('keydown', (event) => { if (event.key === 'Escape') modal.remove(); });
+  const closeModal = () => {
+    modal.remove();
+    vehicle.trigger?.focus();
+  };
+  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+  modal.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
   firstField.focus();
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -71,7 +75,7 @@ document.querySelectorAll('.vehicle-card').forEach((card) => {
     const title = card.querySelector('.card-title').textContent.trim();
     const rate = Number(card.querySelector('.card-text').textContent.replace(/[^0-9]/g, ''));
     button.setAttribute('aria-label', `Rent ${title}`);
-    openBooking({ name: title, rate, type: card.dataset.category });
+    openBooking({ name: title, rate, type: card.dataset.category, trigger: button });
   });
 });
 
