@@ -1,20 +1,43 @@
-# 🚲 RentBikeX
+# CityRide
 
-RentBikeX is a responsive bike rental website built using HTML, CSS, Bootstrap 5, and Font Awesome. It allows users to browse bikes, scooters, and electric bikes with daily rental prices.
+CityRide is a responsive, browser-based bike and scooter rental experience. Browse the fleet, filter by vehicle type, choose rental dates, enter renter details, and receive a local booking reference without needing a backend service.
 
-## Features
+## Live demo
 
-- Responsive Bootstrap navbar
-- Image carousel for homepage banner
-- Bike, scooter, and electric bike listing sections
-- Horizontal scrollable vehicle cards
-- Rent Now buttons
-- Footer with social media icons
-- Separate pages for About Us and Get In Touch
+The site is deployed with GitHub Pages:
 
-## Technologies Used
+**[Open the CityRide demo](https://Princekumarbharti-dev.github.io/cityride-bike-rentals/)**
 
-- HTML5
-- CSS3
-- Bootstrap 5.3.8
-- Font Awesome 6.4.0
+## Full demo flow
+
+1. Browse the fleet from the homepage.
+2. Filter vehicles by bikes, scooters, or electric rides.
+3. Select **Rent Now** on any vehicle.
+4. Choose pickup and return dates.
+5. Enter contact details and review the calculated total.
+6. Confirm the reservation to receive a booking reference.
+7. Visit the About and Contact pages from the navigation.
+
+Bookings are stored in the browser's local storage for this static demo. No payment is processed and no personal data is sent to a server.
+
+## Built with
+
+- HTML5 and accessible semantic markup
+- CSS3 with responsive layouts and custom visual styling
+- Bootstrap 5.3 for layout utilities and carousel behavior
+- Vanilla JavaScript for filtering, validation, price calculation, modal booking, and local persistence
+- GitHub Actions and GitHub Pages for deployment
+
+## Run locally
+
+Because this is a static site, any local web server will work:
+
+```powershell
+python -m http.server 5500
+```
+
+Open `http://localhost:5500` in a browser. Opening `index.html` directly also works, but a local server is recommended for consistent asset loading.
+
+## Production roadmap
+
+The current release is a complete frontend demonstration. A production rental platform would connect the booking form to an API for authentication, vehicle availability, payment processing, staff management, and reservation persistence.
