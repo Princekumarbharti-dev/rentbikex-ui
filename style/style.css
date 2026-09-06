@@ -99,6 +99,11 @@
   transform: translateY(-2px); 
 }
 
+:focus-visible {
+  outline: 3px solid #ffbf69;
+  outline-offset: 3px;
+}
+
 .booking-modal { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; padding: 1rem; background: rgba(16, 42, 67, .62); }
 .booking-panel { position: relative; width: min(100%, 520px); max-height: 92vh; overflow-y: auto; background: white; border-radius: 18px; padding: 2rem; box-shadow: 0 24px 70px rgba(0,0,0,.25); }
 .booking-panel h2 { margin: .4rem 0; font-weight: 800; }

@@ -30,6 +30,7 @@ function openBooking(vehicle) {
   document.body.appendChild(modal);
 
   const form = modal.querySelector('form');
+  const firstField = form.elements.pickup;
   const pickup = form.elements.pickup;
   const returnDate = form.elements.return;
   const total = modal.querySelector('#booking-total');
@@ -43,11 +44,18 @@ function openBooking(vehicle) {
   returnDate.addEventListener('change', updateTotal);
   modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
   modal.addEventListener('click', (event) => { if (event.target === modal) modal.remove(); });
+  modal.addEventListener('keydown', (event) => { if (event.key === 'Escape') modal.remove(); });
+  firstField.focus();
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(form));
     const days = Math.ceil((new Date(data.return) - new Date(data.pickup)) / 86400000) + 1;
-    if (days < 1) return;
+    if (days < 1) {
+      returnDate.setCustomValidity('Return date must be on or after the pickup date.');
+      returnDate.reportValidity();
+      return;
+    }
+    returnDate.setCustomValidity('');
     const reference = `CR-${Date.now().toString().slice(-6)}`;
     localStorage.setItem(bookingKey, JSON.stringify({ ...data, vehicle: vehicle.name, total: days * vehicle.rate, reference }));
     modal.querySelector('.booking-panel').innerHTML = `<button class="modal-close" type="button" aria-label="Close booking confirmation">&times;</button><div class="success-mark"><i class="fa-solid fa-check"></i></div><span class="eyebrow">RESERVATION CONFIRMED</span><h2>You are all set, ${data.name.split(' ')[0]}.</h2><p>Your ${vehicle.name} is reserved from ${data.pickup} to ${data.return}.</p><div class="reference-code">Booking reference <strong>${reference}</strong></div><button class="btn btn-primary w-100" type="button" data-close>Done</button>`;
@@ -62,6 +70,7 @@ document.querySelectorAll('.vehicle-card').forEach((card) => {
     event.preventDefault();
     const title = card.querySelector('.card-title').textContent.trim();
     const rate = Number(card.querySelector('.card-text').textContent.replace(/[^0-9]/g, ''));
+    button.setAttribute('aria-label', `Rent ${title}`);
     openBooking({ name: title, rate, type: card.dataset.category });
   });
 });
