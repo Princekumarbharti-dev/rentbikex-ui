@@ -1,22 +1,21 @@
-# CityRide
+# RentBikeX
 
-CityRide is a responsive, browser-based bike and scooter rental experience. Browse the fleet, filter by vehicle type, choose rental dates, enter renter details, and receive a local booking reference without needing a backend service.
+RentBikeX is a responsive, browser-based bike and scooter rental experience. Browse the fleet, choose rental dates, enter renter details, and receive a local booking reference without needing a backend service.
 
 ## Live demo
 
 The site is deployed with GitHub Pages:
 
-**[Open the CityRide demo](https://Princekumarbharti-dev.github.io/cityride-bike-rentals/)**
+**[Open the RentBikeX demo](https://Princekumarbharti-dev.github.io/cityride-bike-rentals/)**
 
 ## Full demo flow
 
 1. Browse the fleet from the homepage.
-2. Filter vehicles by bikes, scooters, or electric rides.
-3. Select **Rent Now** on any vehicle.
+2. Select **Rent Now** on any vehicle.
 4. Choose pickup and return dates.
 5. Enter contact details and review the calculated total.
 6. Confirm the reservation to receive a booking reference.
-7. Visit the About and Contact pages from the navigation.
+6. Visit the About and Contact pages from the navigation.
 
 Bookings are stored in the browser's local storage for this static demo. No payment is processed and no personal data is sent to a server.
 
